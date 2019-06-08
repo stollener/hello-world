@@ -70,7 +70,7 @@ h3 {
 }
 
 /* For mobile devices */
-@media (max-width: 500px) {
+@media (max-width: 767px) {
   
   #body {
     display: block;
@@ -99,10 +99,10 @@ h3 {
 }
 
 /* for large screen */
-@media (min-width: 800px) {
+@media (min-width: 768px) {
   
   body {
-    width: 800px;
+    width: 768px;
     margin: auto;
   }
 
