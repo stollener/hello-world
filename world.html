@@ -6,19 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <header>
+    <header class="banner">
       <h1><a href="index.html">Hello World</a></h1>
     </header>
     <div id="body">
       <nav>
         <ul class="nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="world.html" id="active">World</a></li>
-          <li><a href="more.html">More</a></li>
+          <li><a href="index.html" class="index">Home</a></li>
+          <li><a href="about.html" class="index">About</a></li>
+          <li><a href="world.html" class="index" id="active">World</a></li>
+          <li><a href="more.html" class="index">More</a></li>
         </ul>
       </nav>
       <div id="content">
+        <div class="buttons">
+          <input type="button" value="normal" onclick="
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('.banner').style.backgroundColor = 'rgb(254, 255, 176)';
+            document.querySelector('.banner h1 a').style.color = 'black';
+            document.querySelector('.banner').style.borderBottomColor = 'rgb(165, 165, 0)';
+            document.querySelector('nav').style.backgroundColor = 'rgb(255, 185, 32)';
+            let selectedNavLiA = document.querySelectorAll('.index');
+            for (let i = 0; i < selectedNavLiA.length; i++) {
+              selectedNavLiA[i].style.color = 'rgb(54, 54, 54)';
+            }
+            document.querySelector('#active').style.color = 'black';
+            document.querySelector('#content').style.backgroundColor = 'rgb(255, 255, 122)';
+            let selectedH3 = document.querySelectorAll('article h3');
+            for (let i = 0; i < selectedH3.length; i++) {
+              selectedH3[i].style.color = 'black';
+            }
+            let selectedParagraph = document.querySelectorAll('article p');
+            for (let i = 0; i < selectedParagraph.length; i++) {
+              selectedParagraph[i].style.color = 'black';
+            }
+            let selectedA = document.querySelectorAll('p a');
+            for (let i = 0; i < selectedA.length; i++) {
+              selectedA[i].style.color = 'rgb(30, 30, 200)';
+            }
+          ">
+          <input type="button" value="dark" onclick="
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('.banner').style.backgroundColor = 'rgb(25, 25, 50)';
+            document.querySelector('.banner h1 a').style.color = 'white';
+            document.querySelector('.banner').style.borderBottomColor = 'rgb(100, 100, 100)';
+            document.querySelector('nav').style.backgroundColor = 'rgb(0, 0, 100)';
+            let selectedNavLiA = document.querySelectorAll('.index');
+            for (let i = 0; i < selectedNavLiA.length; i++) {
+              selectedNavLiA[i].style.color = 'rgb(200, 200, 200)';
+            }
+            document.querySelector('#active').style.color = 'white';
+            document.querySelector('#content').style.backgroundColor = 'rgb(40, 40, 122)';
+            let selectedH3 = document.querySelectorAll('article h3');
+            for (let i = 0; i < selectedH3.length; i++) {
+              selectedH3[i].style.color = 'white';
+            }
+            let selectedParagraph = document.querySelectorAll('article p');
+            for (let i = 0; i < selectedParagraph.length; i++) {
+              selectedParagraph[i].style.color = 'rgb(210, 210, 210)';
+            }
+            let selectedA = document.querySelectorAll('p a');
+            for (let i = 0; i < selectedA.length; i++) {
+              selectedA[i].style.color = 'rgb(200, 200, 30)';
+            }
+          ">
+        </div>
         <article>
           <h3>World</h3>
           <p>World is wide, and it's widen after the birth of the internet.</p>
