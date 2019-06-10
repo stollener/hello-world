@@ -20,54 +20,59 @@
       </nav>
       <div id="content">
         <div class="buttons">
-          <input type="button" value="normal" onclick="
-            document.querySelector('body').style.backgroundColor = 'white';
-            document.querySelector('.banner').style.backgroundColor = 'rgb(254, 255, 176)';
-            document.querySelector('.banner h1 a').style.color = 'black';
-            document.querySelector('.banner').style.borderBottomColor = 'rgb(165, 165, 0)';
-            document.querySelector('nav').style.backgroundColor = 'rgb(255, 185, 32)';
-            let selectedNavLiA = document.querySelectorAll('.index');
-            for (let i = 0; i < selectedNavLiA.length; i++) {
-              selectedNavLiA[i].style.color = 'rgb(54, 54, 54)';
-            }
-            document.querySelector('#active').style.color = 'black';
-            document.querySelector('#content').style.backgroundColor = 'rgb(255, 255, 122)';
-            let selectedH3 = document.querySelectorAll('article h3');
-            for (let i = 0; i < selectedH3.length; i++) {
-              selectedH3[i].style.color = 'black';
-            }
-            let selectedParagraph = document.querySelectorAll('article p');
-            for (let i = 0; i < selectedParagraph.length; i++) {
-              selectedParagraph[i].style.color = 'black';
-            }
-            let selectedA = document.querySelectorAll('p a');
-            for (let i = 0; i < selectedA.length; i++) {
-              selectedA[i].style.color = 'rgb(30, 30, 200)';
-            }
-          ">
-          <input type="button" value="dark" onclick="
-            document.querySelector('body').style.backgroundColor = 'black';
-            document.querySelector('.banner').style.backgroundColor = 'rgb(25, 25, 50)';
-            document.querySelector('.banner h1 a').style.color = 'white';
-            document.querySelector('.banner').style.borderBottomColor = 'rgb(100, 100, 100)';
-            document.querySelector('nav').style.backgroundColor = 'rgb(0, 0, 100)';
-            let selectedNavLiA = document.querySelectorAll('.index');
-            for (let i = 0; i < selectedNavLiA.length; i++) {
-              selectedNavLiA[i].style.color = 'rgb(200, 200, 200)';
-            }
-            document.querySelector('#active').style.color = 'white';
-            document.querySelector('#content').style.backgroundColor = 'rgb(40, 40, 122)';
-            let selectedH3 = document.querySelectorAll('article h3');
-            for (let i = 0; i < selectedH3.length; i++) {
-              selectedH3[i].style.color = 'white';
-            }
-            let selectedParagraph = document.querySelectorAll('article p');
-            for (let i = 0; i < selectedParagraph.length; i++) {
-              selectedParagraph[i].style.color = 'rgb(210, 210, 210)';
-            }
-            let selectedA = document.querySelectorAll('p a');
-            for (let i = 0; i < selectedA.length; i++) {
-              selectedA[i].style.color = 'rgb(200, 200, 30)';
+          <input type="button" value="DARK" onclick="
+            if (document.querySelector('body').dataset.mode === 'dark') {
+              document.querySelector('body').style.backgroundColor = 'white';
+              document.querySelector('.banner').style.backgroundColor = 'rgb(254, 255, 176)';
+              document.querySelector('.banner h1 a').style.color = 'black';
+              document.querySelector('.banner').style.borderBottomColor = 'rgb(165, 165, 0)';
+              document.querySelector('nav').style.backgroundColor = 'rgb(255, 185, 32)';
+              let selectedNavLiA = document.querySelectorAll('.index');
+              for (let i = 0; i < selectedNavLiA.length; i++) {
+                selectedNavLiA[i].style.color = 'rgb(54, 54, 54)';
+              }
+              document.querySelector('#active').style.color = 'black';
+              document.querySelector('#content').style.backgroundColor = 'rgb(255, 255, 122)';
+              let selectedH3 = document.querySelectorAll('article h3');
+              for (let i = 0; i < selectedH3.length; i++) {
+                selectedH3[i].style.color = 'black';
+              }
+              let selectedParagraph = document.querySelectorAll('article p');
+              for (let i = 0; i < selectedParagraph.length; i++) {
+                selectedParagraph[i].style.color = 'black';
+              }
+              let selectedA = document.querySelectorAll('p a');
+              for (let i = 0; i < selectedA.length; i++) {
+                selectedA[i].style.color = 'rgb(30, 30, 200)';
+              }
+              document.querySelector('body').dataset.mode = 'normal';
+              this.value = 'DARK';
+            } else {
+              document.querySelector('body').style.backgroundColor = 'black';
+              document.querySelector('.banner').style.backgroundColor = 'rgb(25, 25, 50)';
+              document.querySelector('.banner h1 a').style.color = 'white';
+              document.querySelector('.banner').style.borderBottomColor = 'rgb(100, 100, 100)';
+              document.querySelector('nav').style.backgroundColor = 'rgb(0, 0, 100)';
+              let selectedNavLiA = document.querySelectorAll('.index');
+              for (let i = 0; i < selectedNavLiA.length; i++) {
+                selectedNavLiA[i].style.color = 'rgb(200, 200, 200)';
+              }
+              document.querySelector('#active').style.color = 'white';
+              document.querySelector('#content').style.backgroundColor = 'rgb(40, 40, 122)';
+              let selectedH3 = document.querySelectorAll('article h3');
+              for (let i = 0; i < selectedH3.length; i++) {
+                selectedH3[i].style.color = 'white';
+              }
+              let selectedParagraph = document.querySelectorAll('article p');
+              for (let i = 0; i < selectedParagraph.length; i++) {
+                selectedParagraph[i].style.color = 'rgb(210, 210, 210)';
+              }
+              let selectedA = document.querySelectorAll('p a');
+              for (let i = 0; i < selectedA.length; i++) {
+                selectedA[i].style.color = 'rgb(200, 200, 30)';
+              }
+              document.querySelector('body').dataset.mode = 'dark';
+              this.value = 'NORMAL';
             }
           ">
         </div>
